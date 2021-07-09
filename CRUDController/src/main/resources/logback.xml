@@ -1,0 +1,13 @@
+<configuration scan="true" scanPeriod="15 seconds"> <!-- By setting the scan attribute to true, we're telling Logback to check the configuration file for changes. The auto-scan happens every 60 seconds by default. -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.example.crudcontroller.CrudController" level="TRACE" />
+
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
